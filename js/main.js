@@ -10,7 +10,7 @@ function maps(){
 	  var featureOpts = [
 	    {
 	      stylers: [
-	        { hue: '#ffa500' },
+	        { hue: '#191970' },
 	        { visibility: 'simplified' },
 	        { gamma: 0.5 },
 	        { weight: 1.0 }
@@ -25,7 +25,7 @@ function maps(){
 	  ];
 
 	  var mapOptions = {
-	    zoom: 8,
+	    zoom: 14,
 	    center: brooklyn,
 	    mapTypeControlOptions: {
 	      mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
