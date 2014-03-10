@@ -2,8 +2,14 @@
 
 /* This document contains the styling in association with the footer of the page. */
 
+
+footer{
+	background-color: $primary-colour;
+	padding: 20px;
+}
+
 footer p{
-	color: #333;
+	color: #FFFFFF;
 	margin: 10px;
 	padding: 5px;	
 }

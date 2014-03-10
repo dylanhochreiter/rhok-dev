@@ -2,10 +2,38 @@
 
 /* This document contains the styling in association with the navigation of the page. */
 
-.navbar-nav{
+.navbar-custom{
+	background-color: $primary-colour;
 
+	@media(min-width: 800px){
+		.navbar-form{
+			padding: 10px 0 0 0;
+		}
+	}
+}
+
+.navbar{
+	background-image:none;
 }
 
 .navbar-nav li a{
-	padding: 22px;
+	padding: 23px;
+
+	&:hover{ background-color: $secondary-colour;}
+}
+
+.navbar .navbar-nav .active a{
+	background-color: $secondary-colour;
+}
+
+.navbar-brand{
+	@media(max-width: 800px){
+		position: absolute;
+		top: 0;
+		width: 300px;
+	}
+}
+
+.icon-bar{
+	background-color: #eee;
 }

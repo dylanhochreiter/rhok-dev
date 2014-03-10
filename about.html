@@ -39,8 +39,8 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">About</a></li>
             <li><a href="projects.html">Projects</a></li>
           </ul>
           <form class="navbar-form navbar-right">
@@ -61,66 +61,33 @@
           <p><a class="btn btn-primary btn-lg">Sign up and join the hackathon <span class="glyphicon glyphicon-chevron-right"></span></a></p>
       </div>
     </div>
-    
-    <div class="carousel">
-      <div class="container carousel">
-        <div class="row">
-          <h2>Come Hack With Us, It is Fun!</h2>
-          <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="item active">
-                <img src="img/slide1.jpg" alt="First slide" class="img-responsive">
-              </div>
-              <div class="item">
-                <img src="img/slide2.jpg" alt="Second slide" class="img-responsive">
-              </div>
-              <div class="item">
-                <img src="img/slide3.jpg" alt="Third slide" class="img-responsive">
-              </div>
-            </div>
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
-          </div><!-- /.carousel -->
-        </div>
+
+    <div class="container">
+      <div class="row">
+          <div class="col-4 col-lg-4">
+            <img src="img/rhok-logo-ott.png" alt="Ottawa RHoK Logo" class="img-responsive">>
+          </div>
+          <div class="col-4 col-lg-8">
+            <h3>Who are we?</h3>
+            <p>We are the Random Hacks of Kindness Ottawa Division.</p>
+            <h3>What do we do?</h3>
+            <p>Host hackathons to support non-profits and other oraganisations.</p>
+            <h3>How can I help?</h3>
+            <p>You can participate in the hackathons and support the group.</p>
+          </div>
       </div>
     </div>
     
     <div class="shrimptron">
       <div class="container">
-        <h2>Recent Projects</h2>
-        <!-- Example row of columns -->
         <div class="row">
           <div class="col-4 col-lg-4">
-            <div class="thumbnail shadow">
-              <img src="img/logo-amnesty.gif" alt="Amnesty International Logo" class="img-responsive">
-              <h2 class="title">Amnesty International</h2>
-              <p class="desc">Some stuff about it</p>
-              <p class="details">We did something</p>
-              <p><a class="btn btn-info" href="#">Learn More <span class="glyphicon glyphicon-chevron-right"></span></span></a></p>
-            </div>
+            <h3>Where are these hackathons hosted?</h3>
+            <p>At Shopify in Ottawa. The address is 126 York Street, Suite 200, Ottawa, ON, Canada</p>
           </div>
-          <div class="col-4 col-lg-4">
-            <div class="thumbnail shadow">
-              <img src="img/logo-amnesty.gif" alt="Amnesty International Logo" class="img-responsive">
-              <h2 class="title">Amnesty International</h2>
-              <p class="desc">Some stuff about it</p>
-              <p class="details">We did something</p>
-              <p><a class="btn btn-info" href="#">Learn More <span class="glyphicon glyphicon-chevron-right"></span></span></a></p>
-            </div>
-          </div>
-          <div class="col-4 col-lg-4">
-            <div class="thumbnail shadow">
-              <img src="img/logo-amnesty.gif" alt="Amnesty International Logo" class="img-responsive">
-              <h2 class="title">Amnesty International</h2>
-              <p class="desc">Some stuff about it</p>
-              <p class="details">We did something</p>
-              <p><a class="btn btn-info" href="#">Learn More <span class="glyphicon glyphicon-chevron-right"></span></span></a></p>
+          <div class="col-4 col-lg-8">
+            <div class="map-holder">
+              <div id="map-canvas"></div>
             </div>
           </div>
         </div>
@@ -131,7 +98,8 @@
       <p>&copy; Random Hacks of Kindness 2014. All rights reserved.</p>
     </footer> 
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>  
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>  
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>

@@ -8,8 +8,31 @@
 /* Navigation components */
 /* Sass Document - Navigation Styles */
 /* This document contains the styling in association with the navigation of the page. */
+.navbar-custom {
+  background-color: midnightblue; }
+  @media (min-width: 800px) {
+    .navbar-custom .navbar-form {
+      padding: 10px 0 0 0; } }
+
+.navbar {
+  background-image: none; }
+
 .navbar-nav li a {
-  padding: 22px; }
+  padding: 23px; }
+  .navbar-nav li a:hover {
+    background-color: #000033; }
+
+.navbar .navbar-nav .active a {
+  background-color: #000033; }
+
+@media (max-width: 800px) {
+  .navbar-brand {
+    position: absolute;
+    top: 0;
+    width: 300px; } }
+
+.icon-bar {
+  background-color: #eee; }
 
 /* Layout Components */
 /* Sass Document - Layout Styles */
@@ -19,7 +42,9 @@
   /* add an inset shadow to the bottom of the jumbotron */
   box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2); }
+  -moz-box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 70px; }
 
 /* Main Layout Styling */
 .row .col-4 {
@@ -32,14 +57,27 @@
   padding: 10px; }
 
 .shrimptron {
-  padding: 10px;
+  padding: 70px;
   box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2);
   -webkit-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2); }
 
 /* Carousel Styles */
+.carousel {
+  background-color: #293542;
+  color: #fff; }
+
 #myCarousel {
   margin: 10px 10px 30px 10px; }
+
+/* About Styles */
+#map-canvas {
+  width: 100%;
+  height: 100%; }
+
+.map-holder {
+  max-width: 800px;
+  height: 460px; }
 
 /* Other Styles */
 .shadow {
@@ -65,7 +103,11 @@
 /* Footer Components */
 /* Sass Document - Footer Styles */
 /* This document contains the styling in association with the footer of the page. */
+footer {
+  background-color: midnightblue;
+  padding: 20px; }
+
 footer p {
-  color: #333;
+  color: #FFFFFF;
   margin: 10px;
   padding: 5px; }
