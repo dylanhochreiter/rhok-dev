@@ -1,71 +1,75 @@
-window.onload = loadJSON();
+$(document).ready(function(){
 
-function loadJSON(){
-   var data_file = "data.json";
-   var http_request = new XMLHttpRequest();
-   try{
-      // Opera 8.0+, Firefox, Chrome, Safari
-      http_request = new XMLHttpRequest();
-   }catch (e){
-      // Internet Explorer Browsers
-      try{
-         http_request = new ActiveXObject("Msxml2.XMLHTTP");
-      }catch (e) {
-         try{
-            http_request = new ActiveXObject("Microsoft.XMLHTTP");
-         }catch (e){
-            // Something went wrong
-            alert("Your browser may not support AJAX, or refresh cause something went wrong");
-            return false;
-         }
-      }
-   }
-   http_request.onreadystatechange  = function(){
+  function loadJSON(){
+     var data_file = "js/data.json";
+     var http_request = new XMLHttpRequest();
+     try{
+        // Opera 8.0+, Firefox, Chrome, Safari
+        http_request = new XMLHttpRequest();
+     }catch (e){
+        // Internet Explorer Browsers
+        try{
+           http_request = new ActiveXObject("Msxml2.XMLHTTP");
+        }catch (e) {
+           try{
+              http_request = new ActiveXObject("Microsoft.XMLHTTP");
+           }catch (e){
+              // Something went wrong
+              alert("Your browser may not support AJAX, or refresh cause something went wrong");
+              return false;
+           }
+        }
+     }
+  }
+     http_request.onreadystatechange  = function(){
 
-      // readyState == 4 means the request was successful
-      if (http_request.readyState == 4  ){
-        // Javascript function JSON.parse to parse JSON data
-        var jsonObj = JSON.parse(http_request.responseText);
+        // readyState == 4 means the request was successful
+        if (http_request.readyState == 4  ){
+          // Javascript function JSON.parse to parse JSON data
+          var jsonObj = JSON.parse(http_request.responseText);
 
-        // My Entire JSON Object from data.json
-
-        for(var key in jsonObj){
-          console.log(jsonObj[key]);
+          // My Entire JSON Object from data.json
 
           var projects = document.getElementById("projects");
 
-          var newDiv = document.createElement('div');
+          for(var key in jsonObj){
+            // console.log(jsonObj[key]);
 
-          var feedImg = document.createElement("img");
+            var newDiv = document.createElement('div');
 
-          feedImg.setAttribute('src', jsonObj[key].imageUrl);
+            var feedImg = document.createElement("img");
 
-          var feedHeader = document.createElement("h3");
+            feedImg.setAttribute('src', jsonObj[key].imageUrl);
 
-          feedHeader.innerHTML = jsonObj[key].title;
+            var feedHeader = document.createElement("h3");
 
-          var feedDesc = document.createElement("p");
+            feedHeader.innerHTML = jsonObj[key].title;
 
-          feedDesc.innerHTML = jsonObj[key].desc;
+            var feedDesc = document.createElement("p");
 
-          var feedDetails = document.createElement("p");
+            feedDesc.innerHTML = jsonObj[key].desc;
 
-          feedDetails.innerHTML = jsonObj[key].details;
+            var feedDetails = document.createElement("p");
 
-          newDiv.appendChild(feedImg);
-          newDiv.appendChild(feedHeader);
-          newDiv.appendChild(feedDesc);
-          newDiv.appendChild(feedDetails);
-          projects.appendChild(newDiv);
+            feedDetails.innerHTML = jsonObj[key].details;
 
+            newDiv.appendChild(feedImg);
+            newDiv.appendChild(feedHeader);
+            newDiv.appendChild(feedDesc);
+            newDiv.appendChild(feedDetails);
+            projects.appendChild(newDiv);
+            
+
+          }
+
+          return false;
+
+          
         }
+     http_request.open("GET", data_file, true);
+     http_request.send();
+    }
 
-        return false;
+  loadJSON();
 
-        
-      }
-
-   }
-   http_request.open("GET", data_file, true);
-   http_request.send();
-}
+});
