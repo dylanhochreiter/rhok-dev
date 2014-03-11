@@ -1,7 +1,7 @@
 function maps(){
 
 	var map;
-	var brooklyn = new google.maps.LatLng(45.42963, -75.68841);
+	var shopify = new google.maps.LatLng(45.42963, -75.68841);
 
 	var MY_MAPTYPE_ID = 'custom_style';
 
@@ -26,7 +26,7 @@ function maps(){
 
 	  var mapOptions = {
 	    zoom: 14,
-	    center: brooklyn,
+	    center: shopify,
 	    mapTypeControlOptions: {
 	      mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
 	    },
@@ -62,9 +62,10 @@ function maps(){
   });
 
   var marker = new google.maps.Marker({
-      position: brooklyn,
+      position: shopify,
       map: map,
-      title: 'Shopify'
+      title: 'Shopify',
+      icon: 'img/icon.png'
 
   });
   google.maps.event.addListener(marker, 'click', function() {
