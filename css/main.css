@@ -9,7 +9,7 @@
 /* Sass Document - Navigation Styles */
 /* This document contains the styling in association with the navigation of the page. */
 .navbar-custom {
-  background-color: midnightblue; }
+  background-color: #26466d; }
   @media (min-width: 800px) {
     .navbar-custom .navbar-form {
       padding: 10px 0 0 0; } }
@@ -18,12 +18,13 @@
   background-image: none; }
 
 .navbar-nav li a {
-  padding: 23px; }
+  padding: 23px;
+  color: #fff; }
   .navbar-nav li a:hover {
-    background-color: #000033; }
+    background-color: #344152; }
 
 .navbar .navbar-nav .active a {
-  background-color: #000033; }
+  background-color: #344152; }
 
 @media (max-width: 800px) {
   .navbar-brand {
@@ -50,6 +51,9 @@
 .row .col-4 {
   padding: 10px; }
 
+.row .col-6 {
+  padding: 20px; }
+
 .row .thumbnail {
   padding: 5px; }
 
@@ -62,16 +66,22 @@
   -webkit-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2);
   -moz-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2); }
 
+.img-pad {
+  padding: 10px; }
+
 /* Carousel Styles */
 .carousel {
   background-color: #293542;
-  color: #fff;
-  padding: 20px; }
+  color: #fff; }
 
 /* About Styles */
 #map-canvas {
   width: 100%;
   height: 100%; }
+
+/* Projects Styles */
+#projects {
+  padding: 20px; }
 
 .map-holder {
   max-width: 800px;
@@ -95,14 +105,14 @@
   bottom: 0;
   left: 10px;
   right: 10px;
-  -moz-border-radius: 100px / 10px;
-  border-radius: 100px / 10px; }
+  -moz-border-radius: 100px/10px;
+  border-radius: 100px/10px; }
 
 /* Footer Components */
 /* Sass Document - Footer Styles */
 /* This document contains the styling in association with the footer of the page. */
 footer {
-  background-color: midnightblue;
+  background-color: #26466d;
   padding: 20px; }
 
 footer p {

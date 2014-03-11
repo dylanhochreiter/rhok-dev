@@ -45,6 +45,32 @@ function maps(){
 	  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
 	}
 
+	 var contentString =
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1>Shopify</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Our Hackathons</b>are held at Shopify. ' +
+      '<p><a href="http://www.shopify.ca/contact">'+
+      'click here for more info</a> '+
+      '</div>'+
+      '</div>';
+
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      // maxWidth: 200   ----We can also set a maxWidth
+  });
+
+  var marker = new google.maps.Marker({
+      position: brooklyn,
+      map: map,
+      title: 'Shopify'
+
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+
 	google.maps.event.addDomListener(window, 'load', initialize);
 
 }

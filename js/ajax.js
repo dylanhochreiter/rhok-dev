@@ -1,6 +1,4 @@
-$(document).ready(function(){
-
-  function loadJSON(){
+function loadJSON(){
      var data_file = "js/data.json";
      var http_request = new XMLHttpRequest();
      try{
@@ -20,7 +18,6 @@ $(document).ready(function(){
            }
         }
      }
-  }
      http_request.onreadystatechange  = function(){
 
         // readyState == 4 means the request was successful
@@ -36,39 +33,66 @@ $(document).ready(function(){
             // console.log(jsonObj[key]);
 
             var newDiv = document.createElement('div');
+            newDiv.className += "shadow";
+             newDiv.className += " row";
 
-            var feedImg = document.createElement("img");
+            var leftCol = document.createElement('div');
 
-            feedImg.setAttribute('src', jsonObj[key].imageUrl);
+            leftCol.className = "col-6";
+            leftCol.className += " col-lg-6";
 
-            var feedHeader = document.createElement("h3");
+            var rightCol = document.createElement('div');
 
-            feedHeader.innerHTML = jsonObj[key].title;
+            rightCol.className = "col-6";
+            rightCol.className += " col-lg-6";
 
-            var feedDesc = document.createElement("p");
+            var projectImg = document.createElement("img");
 
-            feedDesc.innerHTML = jsonObj[key].desc;
+            projectImg.className = "img-responsive";
+            projectImg.setAttribute('src', jsonObj[key].imageUrl);
 
-            var feedDetails = document.createElement("p");
+            var projectHeader = document.createElement("h3");
 
-            feedDetails.innerHTML = jsonObj[key].details;
+            projectHeader.innerHTML = jsonObj[key].title;
 
-            newDiv.appendChild(feedImg);
-            newDiv.appendChild(feedHeader);
-            newDiv.appendChild(feedDesc);
-            newDiv.appendChild(feedDetails);
+            var projectDesc = document.createElement("p");
+
+            projectDesc.innerHTML = jsonObj[key].desc;
+
+            var projectDetails = document.createElement("p");
+
+            projectDetails.innerHTML = jsonObj[key].details;
+
+            var projectUrl = document.createElement('a');
+
+            projectUrl.innerHTML = "The Code";
+            projectUrl.setAttribute('href', jsonObj[key].url);
+
+            var projectTeam = document.createElement('h3');
+            projectTeam.innerHTML = "Project completed by: " + jsonObj[key].team;
+
+            leftCol.appendChild(projectImg);
+            leftCol.appendChild(projectTeam);
+            rightCol.appendChild(projectHeader);
+            rightCol.appendChild(projectDesc);
+            rightCol.appendChild(projectDetails);
+            rightCol.appendChild(projectUrl);
+            newDiv.appendChild(leftCol);
+            newDiv.appendChild(rightCol);
             projects.appendChild(newDiv);
             
 
           }
 
-          return false;
+        }
 
           
-        }
+    }
      http_request.open("GET", data_file, true);
      http_request.send();
-    }
+  }
+
+$(document).ready(function(){
 
   loadJSON();
 
