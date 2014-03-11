@@ -1,4 +1,4 @@
-MTM4086 - Week02 - Sass template
+MTM4086 - Final
 ============================
 http://dylanhochreiter.github.io/rhok-dev/
 
