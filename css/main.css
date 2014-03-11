@@ -1,0 +1,121 @@
+/* Sass Document - Main Styles */
+/* This document compiles all of our unique styling and passes it off to bootstrap.min.css */
+/* Mixins */
+/* Sass Document - Mixins */
+/* This document contains the SASS mixins to be used on main.scss */
+/* Styling Variables */
+/* Font Variables */
+/* Navigation components */
+/* Sass Document - Navigation Styles */
+/* This document contains the styling in association with the navigation of the page. */
+.navbar-custom {
+  background-color: #26466d; }
+  @media (min-width: 800px) {
+    .navbar-custom .navbar-form {
+      padding: 10px 0 0 0; } }
+
+.navbar {
+  background-image: none; }
+
+.navbar-nav li a {
+  padding: 23px;
+  color: #fff; }
+  .navbar-nav li a:hover {
+    background-color: #344152; }
+
+.navbar .navbar-nav .active a {
+  background-color: #344152; }
+
+@media (max-width: 800px) {
+  .navbar-brand {
+    position: absolute;
+    top: 0;
+    width: 300px; } }
+
+.icon-bar {
+  background-color: #eee; }
+
+/* Layout Components */
+/* Sass Document - Layout Styles */
+/* This document contains the styling in association with the layout of the page. */
+/* Jumbotron Styles */
+.jumbotron {
+  /* add an inset shadow to the bottom of the jumbotron */
+  box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px -10px 35px 0px rgba(0, 0, 0, 0.2);
+  margin: 0;
+  padding: 70px; }
+
+/* Main Layout Styling */
+.row .col-4 {
+  padding: 10px; }
+
+.row .col-6 {
+  padding: 20px; }
+
+.row .thumbnail {
+  padding: 5px; }
+
+.row h2 {
+  padding: 10px; }
+
+.shrimptron {
+  padding: 70px;
+  box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 10px 35px 0px rgba(0, 0, 0, 0.2); }
+
+.img-pad {
+  padding: 10px; }
+
+/* Carousel Styles */
+.carousel {
+  background-color: #293542;
+  color: #fff; }
+
+/* About Styles */
+#map-canvas {
+  width: 100%;
+  height: 100%; }
+
+/* Projects Styles */
+#projects {
+  padding: 20px; }
+
+.map-holder {
+  max-width: 800px;
+  height: 460px; }
+
+/* Other Styles */
+.shadow {
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset; }
+
+.shadow-under:before, .shadow-under:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  -moz-border-radius: 100px/10px;
+  border-radius: 100px/10px; }
+
+/* Footer Components */
+/* Sass Document - Footer Styles */
+/* This document contains the styling in association with the footer of the page. */
+footer {
+  background-color: #26466d;
+  padding: 20px; }
+
+footer p {
+  color: #FFFFFF;
+  margin: 10px;
+  padding: 5px; }

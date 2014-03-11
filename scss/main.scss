@@ -1,0 +1,30 @@
+/* Sass Document - Main Styles */
+
+/* This document compiles all of our unique styling and passes it off to bootstrap.min.css */
+
+/* Mixins */
+@import 'mixins';
+
+/* Styling Variables */
+$largest-breakpoint: 1007px;
+$primary-colour: #26466D;
+$secondary-colour: #344152;
+$tertiary-colour:#293542;
+
+/* Font Variables */
+$primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$secondary-font: 'Source-Sans-Pro', Helvetica, Arial, sans-serif;
+
+// body{ font-family: $secondary-font; background-color: #ffffff; -webkit-font-smoothing: antialiased;}
+// h1{}
+// h2{ font-family: $primary-font; @include font-size(22); }
+
+
+/* Navigation components */
+@import 'navigation';
+
+/* Layout Components */
+@import 'layout';
+
+/* Footer Components */
+@import 'footer';
