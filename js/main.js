@@ -1,13 +1,7 @@
-function maps(){
+function initialize() {
+  var myLatlng = new google.maps.LatLng(45.42963, -75.68841);
 
-	var map;
-	var shopify = new google.maps.LatLng(45.42963, -75.68841);
-
-	var MY_MAPTYPE_ID = 'custom_style';
-
-	function initialize() {
-
-	  var featureOpts = [
+  var featureOpts = [
 	    {
 	      stylers: [
 	        { hue: '#191970' },
@@ -24,28 +18,15 @@ function maps(){
 	    }
 	  ];
 
-	  var mapOptions = {
-	    zoom: 14,
-	    center: shopify,
-	    mapTypeControlOptions: {
-	      mapTypeIds: [google.maps.MapTypeId.ROADMAP, MY_MAPTYPE_ID]
-	    },
-	    mapTypeId: MY_MAPTYPE_ID
-	  };
+  var mapOptions = {
+    zoom: 14,
+    center: myLatlng,
+    styles: featureOpts
+  };
 
-	  map = new google.maps.Map(document.getElementById('map-canvas'),
-	      mapOptions);
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-	  var styledMapOptions = {
-	    name: 'Custom Style'
-	  };
-
-	  var customMapType = new google.maps.StyledMapType(featureOpts, styledMapOptions);
-
-	  map.mapTypes.set(MY_MAPTYPE_ID, customMapType);
-	}
-
-	 var contentString =
+   var contentString =
       '<div id="siteNotice">'+
       '</div>'+
       '<h1>Shopify</h1>'+
@@ -61,19 +42,17 @@ function maps(){
       // maxWidth: 200   ----We can also set a maxWidth
   });
 
+  var iconBase = 'img/';
   var marker = new google.maps.Marker({
-      position: shopify,
+      position: myLatlng,
       map: map,
-      title: 'Shopify',
-      icon: 'img/icon.png'
+      title: 'South Park, Colorado',
+      icon: iconBase + 'icon.png'
 
   });
   google.maps.event.addListener(marker, 'click', function() {
     infowindow.open(map,marker);
   });
-
-	google.maps.event.addDomListener(window, 'load', initialize);
-
 }
 
-maps();
+google.maps.event.addDomListener(window, 'load', initialize);
